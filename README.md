@@ -26,10 +26,10 @@ In ``template.html``:
 	`</body>`  
 `</html>`  
 </code>  
-``@html = @xm.html("path/to/template.html",  
-					name: "Fred",  
-					link: "http://example.com/orders",  
-					shipping: true,  
+``@html = @xm.html("path/to/template.html",<br/>
+					name: "Fred",<br/>
+					link: "http://example.com/orders",<br/>
+					shipping: true,<br/>
 					address: "Number Street, Suburb Postcode")``  
 
 It will return:  
@@ -41,6 +41,6 @@ It will return:
 			Please download your order <a href="http://example.com/orders">here</a>.  
 
 			You'll also receive a hard copy to Number Street, Suburb Postcode.  
-		`</body>`  
+		`</body>`   
 	`</html>`  
 </code>  
