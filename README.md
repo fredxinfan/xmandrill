@@ -14,7 +14,7 @@ gem install xmandrill
 2. Send email with customized Mustache template.  
 	In ``template.html``:
 
-	<pre><code>
+	<code><pre>
 		`<html>`  
 			`<body>`  
 				`<p>`Hi {{name}}`</p>`  
@@ -24,7 +24,7 @@ gem install xmandrill
 				{{/shipping}}  
 			`</body>`  
 		`</html>`  
-	</code></pre>
+	</pre></code>
  
 	<pre><code>
 		@html = @xm.html("path/to/template.html",
