@@ -13,7 +13,7 @@ gem install xmandrill
 
 2. Send email with customized Mustache template.  
 In ``template.html``:  
-``  
+<code>  
 `<html>`  
 	`<body>`  
 		Hi {{name}}  
@@ -25,11 +25,11 @@ In ``template.html``:
 		{{/shipping}}  
 	`</body>`  
 `</html>`  
-``  
+</code>  
 ``@html = @xm.html('path/to/template.html', name: "Fred", link: "http://example.com/orders", shipping: true, address: "Number Street, Suburb Postcode")``  
 
 It will return:  
-``  
+<code>  
 	`<html>`  
 		`<body>`  
 			Hi Fred  
@@ -39,4 +39,4 @@ It will return:
 			You'll also receive a hard copy to Number Street, Suburb Postcode.  
 		`</body>`  
 	`</html>`  
-``  
+</code>  
