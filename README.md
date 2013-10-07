@@ -1,23 +1,23 @@
 xmandrill
 =========
 
-A simple API wrapper for Mandrill
+<p>A simple API wrapper for Mandrill</p>
 =================================
 
 # Get started
 
-gem install xmandrill
+<p>gem install xmandrill</p>
 ======================
 
 # Examples
 - 1. Make an API call.
-	@xm = Xmandrill::API.new("valid-api-key")
+	``@xm = Xmandrill::API.new("valid-api-key")
 
-	@xm.users_info
+	@xm.users_info``
 
 - 2. Send email with customized Mustache template.
 	If you have the following code in ``template.html``
-	<html>
+	``<html>
 		<head></head>
 		<body>
 			Hi {{name}}
@@ -28,11 +28,11 @@ gem install xmandrill
 				You'll also receive a hard copy to {{address}}.
 			{{/shipping}}
 		</body>
-	</html>
+	</html>``
 	
-    @html = @xm.html('path/to/template.html', name: "Fred", link: "http://example.com/orders", shipping: true, address: "Number Street, Suburb Postcode")
-
-	<html>
+    ``@html = @xm.html('path/to/template.html', name: "Fred", link: "http://example.com/orders", shipping: true, address: "Number Street, Suburb Postcode")``
+	It will return:
+	``<html>
 		<head></head>
 		<body>
 			Hi Fred
@@ -41,9 +41,10 @@ gem install xmandrill
 			
 			You'll also receive a hard copy to Number Street, Suburb Postcode.
 		</body>
-	</html>
+	</html>``
 
-	@xm.messages_send({
+	Then pass the template to your API call.
+	``@xm.messages_send({
 	    message: {
 	        html: @html,
 	        text: "Example text content",
@@ -127,5 +128,5 @@ gem install xmandrill
 	    async: false,
 	    ip_pool: "Main Pool",
 	    send_at: "example send_at"
-	})
+	})``
 
