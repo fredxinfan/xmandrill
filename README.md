@@ -10,16 +10,16 @@ xmandrill
 ======================
 
 # Examples
-> 1. Make a simple API call. 
+- Make a simple API call. 
 ``@xm = Xmandrill::API.new("valid-api-key")
 @xm.users_info
 ``
 
-> 2. Send email with customized Mustache template.
+- Send email with customized Mustache template.
 If you have the following code in ``template.html``
 ``
 `<html>`
-	`<head></head>`
+	`<head>``</head>`
 	`<body>`
 		Hi {{name}}
 	
@@ -37,7 +37,7 @@ If you have the following code in ``template.html``
 It will return:
 ``
 `<html>`
-	`<head></head>`
+	`<head>``</head>`
 	`<body>`
 		Hi Fred
 	
