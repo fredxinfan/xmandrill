@@ -13,7 +13,7 @@ gem install xmandrill
 
 2. Send email with customized Mustache template.  
 
-	In <code>template.html</code>:  
+	In *template.html*:  
 
 	<pre><code>
 		`<html>`  
