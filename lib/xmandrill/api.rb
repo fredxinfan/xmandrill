@@ -10,11 +10,13 @@ module Xmandrill
       Mustache.render(html, params)
     end
   
-    def method_missing(method, params = {})
-      url = @end_point + method.to_s.gsub("_","/") + ".json"
-      response = HTTParty.post(url, :body => params.merge(:key => @key).to_json, :headers => {"Content-Type" => "application/json"})
+    def method_missing(method, *params)
+      url = @end_point + method.to_s + "/" + params.first.to_s + ".json"
+      body = params.last.is_a?(Hash) ? params.last.merge(:key => @key) : {:key => @key}
+      response = HTTParty.post(url, :body => body.to_json, :headers => {"Content-Type" => "application/json"})
       
       if response.code.to_i == 200
+        return "PONG!" if response.body == "\"PONG!\""
         JSON.parse(response.body)
       else
         raise(API::Error.new(JSON.parse(response.body)["code"], JSON.parse(response.body)["message"]))
@@ -23,7 +25,7 @@ module Xmandrill
     
     class Error < ::Exception
       def initialize(code, message)
-        "(#{code}) #{message}"
+        super "(#{code}) #{message}"
       end
     end
   end

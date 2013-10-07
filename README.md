@@ -9,7 +9,7 @@ gem install xmandrill
 ## Examples  
 1. Make a simple API call.  
 ``@xm = Xmandrill::API.new("valid-api-key")``  
-``@xm.users_info``  
+``@xm.users(:info)``  
 
 2. Send email with customized Mustache template.  
 	In ``template.html``:  
@@ -47,7 +47,7 @@ gem install xmandrill
 	
 	Then pass the template to your API call.  
 	<code><pre>
-	@xm.messages_send({
+	@xm.messages(:send, {
 		message: {
 		    html: @html,
 		    text: "Example text content",
@@ -134,3 +134,4 @@ gem install xmandrill
 		})
 	</code></pre>
 	
+For more information please refer to [Mandrill API](https://mandrillapp.com/api/docs/)
