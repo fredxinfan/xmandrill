@@ -18,7 +18,7 @@ In ``template.html``:
 	`<body>`  
 		Hi {{name}}  
 
-		Please download your order `<a href="{{link}}">`here`</a>`.  
+		Please download your order <a href="{{link}}">here</a>.  
 
 		{{#shipping}}  
 			You'll also receive a hard copy to {{address}}.  
@@ -26,7 +26,11 @@ In ``template.html``:
 	`</body>`  
 `</html>`  
 </code>  
-``@html = @xm.html('path/to/template.html', name: "Fred", link: "http://example.com/orders", shipping: true, address: "Number Street, Suburb Postcode")``  
+``@html = @xm.html("path/to/template.html",  
+					name: "Fred",  
+					link: "http://example.com/orders",  
+					shipping: true,  
+					address: "Number Street, Suburb Postcode")``  
 
 It will return:  
 <code>  
@@ -34,7 +38,7 @@ It will return:
 		`<body>`  
 			Hi Fred  
 
-			Please download your order `<a href="http://example.com/orders">`here`</a>`.  
+			Please download your order <a href="http://example.com/orders">here</a>.  
 
 			You'll also receive a hard copy to Number Street, Suburb Postcode.  
 		`</body>`  
