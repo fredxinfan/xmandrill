@@ -16,7 +16,7 @@ gem install xmandrill
 	In ``template.html``:  
 
 	<pre><code>
-		<html>  
+		`<html>`  
 			`<body>`  
 				`<p>`Hi {{name}}`</p>`  
 				`<p>`Please download your order `<a href="{{link}}">`here`</a>`.`</p>`  
@@ -44,4 +44,4 @@ gem install xmandrill
 	            `<p>`You'll also receive a hard copy to Number Street, Suburb Postcode.`</p>`  
 	        `</body>`   
 	    `</html>`  
-	<pre><code>
+	</pre></code>
