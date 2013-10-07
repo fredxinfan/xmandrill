@@ -9,7 +9,7 @@ gem install xmandrill
 ## Examples  
 1. Make a simple API call.  
 ``@xm = Xmandrill::API.new("valid-api-key")``  
-                   ``@xm.users_info``  
+``@xm.users_info``  
 
 2. Send email with customized Mustache template.  
 In ``template.html``:  
@@ -23,11 +23,11 @@ In ``template.html``:
 	`</body>`  
 `</html>`  
   
-``@html = @xm.html("path/to/template.html",  
-					name: "Fred",  
-					link: "http://example.com/orders",  
-					shipping: true,  
-					address: "Number Street, Suburb Postcode")``  
+``@html = @xm.html("path/to/template.html",``  
+					``name: "Fred",``  
+					``link: "http://example.com/orders",``  
+					``shipping: true,``  
+					``address: "Number Street, Suburb Postcode")``  
 
 It will return:  
     `<html>`  
