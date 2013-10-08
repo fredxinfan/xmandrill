@@ -40,7 +40,7 @@ gem install xmandrill
 	        `<body>`  
 	            `<p>`Hi Fred`</p>`  
 	            `<p>`Please download your order `<a href="http://example.com/orders">`here`</a>`.`</p>`  
-	            `<p>`You'll also receive a hard copy to Number Street, Suburb Postcode.`</p>`  
+	            `<p>`You'll also receive a hard copy at Number Street, Suburb Postcode.`</p>`  
 	        `</body>`   
 	    `</html>`  
 	</pre></code>  
